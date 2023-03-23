@@ -21,27 +21,26 @@
 		</div>
 		<div class="menuotherhalf col-4"></div>
 	</div> -->
-	<div class="col-12 fonex">  <!-- main -->
-		<div style="height: 110px"></div>
+	<div class="col-12 fonex main"> 
 		<div id="enterDetails">
-	        <h1>Enter details</h1>
+	        <h1>Войти</h1>
 
 	        <h4>ID</h4> 
 	        <input id="enterID" type="text"> 
 
-	        <h4>Name</h4> 
+	        <h4>Имя</h4> 
 	        <input id="enterName" type="text"> 
 
-	        <h4>Age</h4> 
+	        <h4>Сколько лет</h4> 
 	        <input id="enterAge" type="number"> <br><br>
 
-	        <button id="insert">INSERT</button>
-	        <button id="update">UPDATE</button>
-	        <button id="remove">REMOVE</button> <br><br>
+	        <button id="insert">вставсить</button>
+	        <button id="update">апдэйт</button>
+	        <button id="remove">убрать</button> <br><br>
 	    </div>
 
 	    <div id="findDetails">
-	        <h1>Find by ID</h1>
+	        <h1>Найти по айди</h1>
 	        <h4>ID</h4>
 	        <input id="findID" type="text"> <br><br>
 	        <button id="find">FIND</button>
@@ -49,9 +48,62 @@
 	        <h3 id="findAge" type="number"></h3> <br><br>
 	    </div>
 	</div>
-	<div class="">
-
-		
+	<div class="logindiv"> <!--login-->
+		<div class=" col-6 "></div>
+		<div class="col-10 mx-auto text-center">
+			<img src="img/logow.svg" alt="Картинка"  class="w-100 mt-5" style="height:130px" />
+		</div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="Логин" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<div  class="mx-auto col-5 mt-4">
+				<button class="login btn btn-light btn-lg">Войти</button>
+			</div>
+			
+			<h6 class="regopener text-end mt-4 text-light" id="regopener">регистрация </h6>
+		</div>
+	</div>
+	<div class="regchoose"><!--register choose-->
+		<button class="btn btn-sm btn-light mt-4 ms-4 "><-</button>
+			<h4 class="text-center mt-5">Кам вы являетесь</h4>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100">Родитель</button>
+				
+			</div>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100 mt-4">Учитель</button>
+				
+			</div>
+	</div>
+	<div class="registerdivteacher"> <!--register teacher-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
+	</div>
+	<div class="registerdivparent"> <!--register parent-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин ребенка" id="findPassword" type="text" >
+			<input class="w-100 mt-4  border-0 rounded" placeholder="Пароль ребенка" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
 	</div>
 <script src="script.js"></script>
 <script type="module">
@@ -89,21 +141,26 @@
         var enterID = document.querySelector("#enterID");
         var enterName = document.querySelector("#enterName");
         var enterAge = document.querySelector("#enterAge");
+        var enterPassword = document.querySelector("#enterPassword")
         var findID = document.querySelector("#findID");
         var findName = document.querySelector("#findName");
         var findAge = document.querySelector("#findAge");
-      
+        var findPassword = document.querySelector("#findPassword");
+      	
 
         var insertBtn = document.querySelector("#insert");
         var updateBtn = document.querySelector("#update");
         var removeBtn = document.querySelector("#remove");
         var findBtn = document.querySelector("#find");
+        var loginBtn = document.querySelector("#login");
 
-        function InsertData() {
-            set(ref(db, "People/"+ enterID.value),{
+        function InsertDataTeacher() {
+            set(ref(db, "Teachers/"+ enterID.value),{
                 Name: enterName.value,
-                ID: enterID.value,
-                Age: enterAge.value
+                Class: enterClass.value,
+                Username: enterUsername.value,
+                Age: enterAge.value,
+                Password: enterPassword.value 
             })
             .then(()=>{
                 alert("Data added successfully");
@@ -112,7 +169,53 @@
                 alert(error);
             });
         }
+        function InsertDataparent() {
+            set(ref(db, "Parents/"+ enterID.value),{
+                Name: enterName.value,
+                UsernameChild: enterClass.value,
+                PasswordChild: enterUsername.value,
+                Password: enterPassword.value 
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+            const dbref = ref(db);
 
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+        }
+
+
+        function loginusual() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
         function FindData() {
             const dbref = ref(db);
 
@@ -159,6 +262,6 @@
         removeBtn.addEventListener('click', RemoveData);
         findBtn.addEventListener('click', FindData);
 
-      </script>
+</script>
 </body>
 </html>
