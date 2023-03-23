@@ -6,12 +6,6 @@
 			height: 70px;
 			background-color: #205E68;
 		}
-		.fonex{
-			height: 640px;
-			background-image: url(fon3.png);
-			background-size: cover ;
-			background-position: center center;
-		}
 		.menu{
 			position: fixed;
 			left: 0;
@@ -19,13 +13,7 @@
 			height: 840px;
 			width: 200px;
 			background-image: url(img/menu_bg.svg);
-		}
-		.menuotherhalf{
-			display: none;			
-			height: 640px;
-		}
-		.menuholder{
-			height: 640px;
+			display: none;
 		}
 		.logindiv{
 			height: 640px;
@@ -52,3 +40,47 @@
 			width: 360px;
 			background-image: url(img/register_bg.svg);
 			color: #47848C;
+		}
+		.menubtnopen{
+			display: none;
+		}
+		.menubtnclosed{
+			display: block;
+		}
+		.menubtn{
+			background-image: url(img/btn_menu.svg);
+			background-size: cover ;
+			background-position: center center;
+			width: 200px;
+			height: 45px;
+
+		}
+		.main{
+			height:2504px; 
+			width: 360px;
+			background-image: url(img/main.svg);
+		}
+		.timetable{
+			height:958px; 
+			width: 360px;
+			background-image: url(img/timetable.svg);
+			display: none;
+		}
+		.eatery{
+			height:1010px; 
+			width: 360px;
+			background-image: url(img/eatery.svg);
+			display: none;
+		}
+		.navigation{
+			height:640px; 
+			width: 360px;
+			background-image: url(img/navigation.svg);
+			display: none;
+		}
+		.events{
+			height:1086px; 
+			width: 360px;
+			background-image: url(img/events.svg);
+			display: none;
+		}
