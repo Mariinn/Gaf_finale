@@ -8,23 +8,84 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class="logindiv"> <!--login-->
+		<div class=" col-6 "></div>
+		<div class="col-10 mx-auto text-center">
+			<img src="img/logow.svg" alt="Картинка"  class="w-100 mt-5" style="height:130px" />
+		</div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="Логин" id="enterName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPassword" type="text" >
+			<div  class="mx-auto col-5 mt-4">
+				<button class="login btn btn-light btn-lg">Войти</button>
+			</div>
+			
+			<h6 class="regopener text-end mt-4 text-light" id="regopener">регистрация </h6>
+		</div>
+	</div>
+	<div class="regchoose"><!--register choose-->
+		<button class="btn btn-sm btn-light mt-4 ms-4 " id=""><-</button>
+			<h4 class="text-center mt-5">Кам вы являетесь</h4>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100">Родитель</button>
+				
+			</div>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100 mt-4">Учитель</button>
+				
+			</div>
+	</div>
+	<div class="registerdivteacher"> <!--register teacher-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="enterName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="enterClass" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин" id="enterlogin" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля"  type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="registert btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
+	</div>
+	<div class="registerdivparent"> <!--register parent-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин ребенка" id="findPassword" type="text" >
+			<input class="w-100 mt-4  border-0 rounded" placeholder="Пароль ребенка" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="registerp btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
+	</div>
 
-	<div class="menu "> 
+
+
+
+
+	<div class="menu text-light"> 
 		<div style="height: 120px;"></div>
-		<button id="menubtnmain" class="menubtn btn">Главная</button>
-		<button id="menubtnnavigation" class="menubtn btn">Навигация</button>
-		<button id="menubtnevents" class="menubtn btn">Мероприятия</button>
-		<button id="menubtntimetable" class="menubtn btn">Расписание</button>
-		<button id="menubtneatery" class="menubtn btn">Столовая</button>
+		<button id="menubtnmain" class="menubtn btn text-light">Главная</button>
+		<button id="menubtnnavigation" class="menubtn btn text-light">Навигация</button>
+		<button id="menubtnevents" class="menubtn btn text-light">Мероприятия</button>
+		<button id="menubtntimetable" class="menubtn btn text-light">Расписание</button>
+		<button id="menubtneatery" class="menubtn btn text-light">Столовая</button>
 
-		<button id="menubtncardp" class="menubtn btn">Карта питания (родитель)</button>
-		<button id="menubtncardu" class="menubtn btn">Карта питания  (учвщийся)</button>
+		<button id="menubtncardp" class="menubtn btn text-light">Карта питания (род)</button>
+		<button id="menubtncardu" class="menubtn btn text-light">Карта питания  (учащ)</button>
 
-		<button id="menubtnfond" class="menubtn btn">Фонд класса</button>
+		<button id="menubtnfond" class="menubtn btn text-light">Фонд класса</button>
 
-		<button id="menubtnratingt" class="menubtn btn">Рэйтинг (учитель)</button>
-		<button id="menubtnratingp" class="menubtn btn">Рэйтинг (родитель)</button>
-		<button id="menubtnratingu" class="menubtn btn">Рэйтинг  (учвщийся)</button>
+		<button id="menubtnratingt" class="menubtn btn text-light">Рэйтинг (учит)</button>
+		<button id="menubtnratingp" class="menubtn btn text-light">Рэйтинг (род)</button>
+		<button id="menubtnratingu" class="menubtn btn text-light">Рэйтинг  (учащ)</button>
 		<div class="col-4 mx-auto bg-light rounded">
 			<a href="https://t.me/+XRHksiVNQeUwMmQy" class="text-info" >@GaF.pr </a>
 		</div>
@@ -40,16 +101,36 @@
 	<div class="pt-3 ps-3 navigation" >	
 		
 	</div>
+	<div class="pt-3 ps-3 events" >	
+		
+	</div>
 	<div class="pt-3 ps-3 timetable" >	
 		
 	</div>
 	<div class="pt-3 ps-3 eatery" >	
 		
 	</div>
-	<div class="pt-3 ps-3 events" >	
+
+	<div class="pt-3 ps-3 cardp" >	
 		
 	</div>
-<script type="text/javascript">
+	<div class="pt-3 ps-3 cardu" >	
+		
+	</div>
+	<div class="pt-3 ps-3 fond" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingt" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingp" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingu" >	
+		
+	</div>
+	<script src="script.js"></script>
+<!-- <script type="text/javascript">
 	var menubtnopen = document.querySelector('#menubtnopen');
 	var menubtnclosed = document.querySelector('#menubtnclosed');
 
@@ -63,7 +144,7 @@
 	var menubtncardu = document.querySelector('#menubtncardu');
 
 	var menubtnfond = document.querySelector('#menubtnfond');
-	
+
 	var menubtnratingt = document.querySelector('#menubtnratingt');
 	var menubtnratingp = document.querySelector('#menubtnratingp');
 	var menubtnratingu = document.querySelector('#menubtnratingu');
@@ -134,6 +215,6 @@
 	menubtnevents.addEventListener('click', menuevents);
 	menubtntimetable.addEventListener('click', menutimetabe);
 	menubtneatery.addEventListener('click', menueatery);
-</script>
+</script> -->
 </body>
 </html>

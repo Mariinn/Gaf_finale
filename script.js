@@ -1,195 +1,253 @@
+	var regopener = document.querySelector('#regopener');
+	var regchooseback = document.querySelector('#regchooseback');
+	var login = document.querySelector('#login');
+	var parent = document.querySelector('#parent');
+	var teacher = document.querySelector('#teacher');
+	var toregchoose1 = document.querySelector('#toregchoose1');
+	var toregchoose2 = document.querySelector('#toregchoose2');
+	var loginbtn = document.querySelector('#loginbtn');
+	var registert = document.querySelector('#registert');
+	var registerp = document.querySelector('#registerp');
 
-let menubtn = document.querySelector('.menubtn')
-let menu = document.querySelector('.menu')
-let menuholder = document.querySelector('.menuholder')
-let menuotherhalf = document.querySelector('.menuotherhalf')
-let regopener = document.querySelector('#regopener')
-let registerdivteacher = document.querySelector('.registerdivteacher')
-let logindiv = document.querySelector('.logindiv')
-let login = document.querySelector('.login')
-// menubtn.onclick = function(){
-// 		menuotherhalf.style.display = 'block';
-// 		menuholder.style.display = 'block';
-// 		menu.style.display = 'block';
-// }
-// menuotherhalf.onclick = function() {
-// 	menuholder.style.display = 'none';
-// 	alert()
-// }
-function gotoregchoose(){
-	registerdivchoose.style.display = 'block';
-	logindiv.style.display = 'none';
-	alert()
-}
-function gotoregpar(){
-	registerdivteacher.style.display = 'block';
-	logindiv.style.display = 'none';
-	alert()
-}
-function gotoregpteach(){
-	registerdivteacher.style.display = 'block';
-	logindiv.style.display = 'none';
-	alert()
-}
-function gotomain(){
-	main.style.display = 'block';
-	logindiv.style.display = 'none';
-	alert()
-}
-regopener.addEventListener('click', gotoregchoose);
-regopenert.addEventListener('click', gotoregpar);
-regopenerp.addEventListener('click', gotoregpteach);
+	var menubtnopen = document.querySelector('#menubtnopen');
+	var menubtnclosed = document.querySelector('#menubtnclosed');
 
+	var menubtnmain= document.querySelector('#menubtnmain');
+	var menubtnnavigation = document.querySelector('#menubtnnavigation');
+	var menubtnevents = document.querySelector('#menubtnevents');
+	var menubtntimetable = document.querySelector('#menubtntimetable');
+	var menubtneatery = document.querySelector('#menubtneatery');
+	var menubtncardp = document.querySelector('#menubtncardp');
+	var menubtncardu = document.querySelector('#menubtncardu');
+	var menubtnfond = document.querySelector('#menubtnfond');
+	var menubtnratingt = document.querySelector('#menubtnratingt');
+	var menubtnratingp = document.querySelector('#menubtnratingp');
+	var menubtnratingu = document.querySelector('#menubtnratingu');
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
-		  // TODO: Add SDKs for Firebase products that you want to use
-		  // https://firebase.google.com/docs/web/setup#available-libraries
+	let logindiv = document.querySelector('.logindiv');
+	let regchoose = document.querySelector('.regchoose');
+	let registerdivteacher = document.querySelector('.registerdivteacher');
+	let registerdivparent = document.querySelector('.registerdivparent');
 
-		  // Your web app's Firebase configuration
-		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-		  const firebaseConfig = {
-		    apiKey: "AIzaSyBZkY-uGaSlG2BGD1oWGWkCQfoJYo7Fpv0",
-		    authDomain: "gaf-final.firebaseapp.com",
-		    databaseURL: "https://gaf-final-default-rtdb.europe-west1.firebasedatabase.app",
-		    projectId: "gaf-final",
-		    storageBucket: "gaf-final.appspot.com",
-		    messagingSenderId: "1016022350146",
-		    appId: "1:1016022350146:web:f9fd5746bcea73524af0db",
-		    measurementId: "G-G2KDVKFJXL"
-		  };
+	let header = document.querySelector('.header');
+	let menu = document.querySelector('.menu');
+	let main = document.querySelector('.main');
+	let navigation = document.querySelector('.navigation');
+	let events = document.querySelector('.events');
+	let timetable = document.querySelector('.timetable');
+	let eatery = document.querySelector('.eatery');
+	let cardp = document.querySelector('.cardp');
+	let cardu = document.querySelector('.cardu');
+	let fond = document.querySelector('.fond');
+	let ratingt = document.querySelector('.ratingt');
+	let ratingp = document.querySelector('.ratingp');
+	let ratingu = document.querySelector('.ratingu');
+	let menustat=0;
 
-		  // Initialize Firebase
-		const app = initializeApp(firebaseConfig);
-		const analytics = getAnalytics(app);
+	function openmain1() {
+        	main.style.display = 'block';
+        	header.style.display = 'block';
+        	logindiv.style.display = 'none'
+    }
+	function openmain2() {
+        	main.style.display = 'block';
+        	header.style.display = 'block';
+        	registerdivteacher.style.display = 'none'
+    }
+	function openmain3() {
+        	main.style.display = 'block';
+        	header.style.display = 'block';
+        	registerdivparent.style.display = 'none'
+    }
+	function openregchoose() {
+        	regchoose.style.display = 'block';
+        	logindiv.style.display = 'none'
+    }
+	function closeregchoose() {
+        	regchoose.style.display = 'none';
+        	logindiv.style.display = 'block'
+    }
+	function openregteacher() {
+        	regchoose.style.display = 'none';
+        	registerdivteacher.style.display = 'block'
+    }
+	function openregparent() {
+        	regchoose.style.display = 'none';
+        	registerdivparent.style.display = 'block'
+    }
+	function backtoregchoose1() {
+        	regchoose.style.display = 'block';
+        	registerdivteacher.style.display = 'none'
+    }
+	function backtoregchoose2() {
+        	regchoose.style.display = 'block';
+        	registerdivparent.style.display = 'none'
+    }
+	regopener.addEventListener('click', openregchoose);
+	regchooseback.addEventListener('click', closeregchoose);
+	teacher.addEventListener('click', openregteacher);
+	parent.addEventListener('click', openregparent);
+	toregchoose1.addEventListener('click', backtoregchoose1);
+	toregchoose2.addEventListener('click', backtoregchoose2);
 
-
-        import {getDatabase, ref, get, set, child, update, remove}
-        from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"
-        
-
-        const db = getDatabase();
-
-        var enterID = document.querySelector("#enterID");
-        var enterName = document.querySelector("#enterName");
-        var enterAge = document.querySelector("#enterAge");
-        var enterPassword = document.querySelector("#enterPassword")
-        var findID = document.querySelector("#findID");
-        var findName = document.querySelector("#findName");
-        var findAge = document.querySelector("#findAge");
-        var findPassword = document.querySelector("#findPassword");
-      	
-
-        var insertBtn = document.querySelector("#insert");
-        var updateBtn = document.querySelector("#update");
-        var removeBtn = document.querySelector("#remove");
-        var findBtn = document.querySelector("#find");
-        var loginBtn = document.querySelector("#login");
-
-        function InsertDataTeacher() {
-            set(ref(db, "Teachers/"+ enterID.value),{
-                Name: enterName.value,
-                Class: enterClass.value,
-                Username: enterUsername.value,
-                Age: enterAge.value,
-                Password: enterPassword.value 
-            })
-            .then(()=>{
-                alert("Data added successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-        function InsertDataparent() {
-            set(ref(db, "Parents/"+ enterID.value),{
-                Name: enterName.value,
-                UsernameChild: enterClass.value,
-                PasswordChild: enterUsername.value,
-                Password: enterPassword.value 
-            })
-            .then(()=>{
-                alert("Data added successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-            const dbref = ref(db);
-
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
-        }
+	loginbtn.addEventListener('click', openmain1);
+	registert.addEventListener('click', openmain2);
+	registerp.addEventListener('click', openmain3);
 
 
-        function loginusual() {
-            const dbref = ref(db);
 
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
-            
-        }
-        function FindData() {
-            const dbref = ref(db);
 
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
-            
-        }
+	function openmenu() {
+        	menu.style.display = 'block';
+        	menubtnclosed.style.display = 'block';
+        	menubtnopen.style.display = 'none'
+    }
+	function closemenu() {
+        	menu.style.display = 'none';
+        	menubtnclosed.style.display = 'none';
+        	menubtnopen.style.display = 'block'
+    }
+	menubtnclosed.addEventListener('click', closemenu);
+	menubtnopen.addEventListener('click', openmenu);
 
-        function UpdateData(){
-            update(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data updated successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+	function menumain() {
+        	menu.style.display = 'none';
+        	navigation.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	main.style.display = 'block';
+    }
+	function menunavigation() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	navigation.style.display = 'block';
+    }
+	function menutimetabe() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	timetable.style.display = 'block';
+    }
+	function menueatery() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	eatery.style.display = 'block';
+    }
+	function menucardp() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	cardp.style.display = 'block';
+    }
+	function menucardu() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	cardu.style.display = 'block';
+    }
+	function menufond() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	fond.style.display = 'block';
+    }
+	function menuratingt() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'none';
+        	ratingt.style.display = 'block';
+    }
+	function menuratingp() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'block';
+        	ratingu.style.display = 'none';
+        	cardu.style.display = 'none';
+    }
+	function menuratingu() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'none';
+        	cardp.style.display = 'none';
+        	cardu.style.display = 'none';
+        	fond.style.display = 'none';
+        	ratingt.style.display = 'none';
+        	ratingp.style.display = 'none';
+        	ratingu.style.display = 'block';
+    }
+	menubtnmain.addEventListener('click', menumain);
+	menubtnnavigation.addEventListener('click', menunavigation);
+	menubtntimetable.addEventListener('click', menutimetabe);
+	menubtneatery.addEventListener('click', menueatery);
+	menubtncardp.addEventListener('click', menucardp);
+	menubtncardu.addEventListener('click', menucardu);
+	menubtnfond.addEventListener('click', menufond);
 
-        function RemoveData(){
-            remove(ref(db, "People/"+ enterID.value))
-            .then(()=>{
-                alert("Data deleted successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-
-        insertBtn.addEventListener('click', InsertData);
-        updateBtn.addEventListener('click', UpdateData);
-        removeBtn.addEventListener('click', RemoveData);
-        findBtn.addEventListener('click', FindData);
+	menubtnratingt.addEventListener('click', menuratingt);
+	menubtnratingp.addEventListener('click', menuratingp);
+	menubtnratingu.addEventListener('click', menuratingu);

@@ -8,107 +8,130 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<body>
-	<div class="menu bg-light "> 
-	</div>	
-	<div class="header col-12 ps-4 py-3"> <!-- header -->
-			<button class="btn bg-light menubtn ">=</button>
-		</div>
-	</div> 
-	<!-- <div class="menuholder d-flex col-12">
-		<div class="menu bg-light col-8"> 
-		</div>
-		<div class="menuotherhalf col-4"></div>
-	</div> -->
-	<!-- <div class="col-12 fonex main"> 
-		<div id="enterDetails">
-	        <h1>Войти</h1>
-
-	        <h4>ID</h4> 
-	        <input id="enterID" type="text"> 
-
-	        <h4>Имя</h4> 
-	        <input id="enterName" type="text"> 
-
-	        <h4>Сколько лет</h4> 
-	        <input id="enterAge" type="number"> <br><br>
-
-	        <button id="insert">вставсить</button>
-	        <button id="update">апдэйт</button>
-	        <button id="remove">убрать</button> <br><br>
-	    </div>
-
-	    <div id="findDetails">
-	        <h1>Найти по айди</h1>
-	        <h4>ID</h4>
-	        <input id="findID" type="text"> <br><br>
-	        <button id="find">FIND</button>
-	        <h3 id="findName" type="text"></h3>
-	        <h3 id="findAge" type="number"></h3> <br><br>
-	    </div>
-	</div> -->
 	<div class="logindiv"> <!--login-->
 		<div class=" col-6 "></div>
 		<div class="col-10 mx-auto text-center">
 			<img src="img/logow.svg" alt="Картинка"  class="w-100 mt-5" style="height:130px" />
 		</div>
 		<div class="col-7 mx-auto mt-5">
-			<input class="w-100 border-0 rounded" placeholder="Логин" id="enterName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPassword" type="text" >
+			<input class="w-100 border-0 rounded" placeholder="Логин" id="enterloginu" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="ID" id="enterIDu" type="number">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPasswordu" type="text" >
 			<div  class="mx-auto col-5 mt-4">
-				<button class="login btn btn-light btn-lg">Войти</button>
+				<button class=" btn btn-light btn-lg" id="loginbtn">Войти</button>
 			</div>
 			
 			<h6 class="regopener text-end mt-4 text-light" id="regopener">регистрация </h6>
 		</div>
 	</div>
 	<div class="regchoose"><!--register choose-->
-		<button class="btn btn-sm btn-light mt-4 ms-4 "><-</button>
+		<button class="btn btn-sm btn-light mt-4 ms-4 " id="regchooseback"><-</button>
 			<h4 class="text-center mt-5">Кам вы являетесь</h4>
 			<div class="mx-auto col-6">
-				<button class="login btn btn-light w-100">Родитель</button>
+				<button class=" btn btn-light w-100" id="parent">Родитель</button>
 				
 			</div>
 			<div class="mx-auto col-6">
-				<button class="login btn btn-light w-100 mt-4">Учитель</button>
+				<button class=" btn btn-light w-100 mt-4" id="teacher">Учитель</button>
 				
 			</div>
 	</div>
 	<div class="registerdivteacher"> <!--register teacher-->
-		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<button class="btn btn-sm btn-light mt-4 ms-4" id="toregchoose1"><-</button>
 		<div class=" col-6 "></div>
 		<div class="col-7 mx-auto mt-5">
-			<input class="w-100 border-0 rounded" placeholder="ФИО" id="enterName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="enterClass" type="text" >
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин" id="findName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="enterNamet" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="enterClasst" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="ID" id="enterIDt" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPasswordt" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля"  type="text" >
 			<div  class="mx-auto col-11 mt-4">
-				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+				<button class=" btn btn-light" id="registert">зарегистрироваться</button>
 			</div>
 			
 		</div>
 	</div>
 	<div class="registerdivparent"> <!--register parent-->
-		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<button class="btn btn-sm btn-light mt-4 ms-4" id="toregchoose2"><-</button>
 		<div class=" col-6 "></div>
 		<div class="col-7 mx-auto mt-5">
-			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин ребенка" id="findPassword" type="text" >
-			<input class="w-100 mt-4  border-0 rounded" placeholder="Пароль ребенка" id="findName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="enterNamep" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин ребенка" id="enterloginchp" type="text" >
+			<input class="w-100 mt-4  border-0 rounded" placeholder="Пароль ребенка"  id="enterpasswordchp" type="text">
+			<input class="w-100 mt-4  border-0 rounded" placeholder="ID ребенка"  id="enterIDp" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPasswordp" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" type="text" >
 			<div  class="mx-auto col-11 mt-4">
-				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+				<button class=" btn btn-light" id="registerp">зарегистрироваться</button>
 			</div>
 			
 		</div>
 	</div>
-	<div class="pt-3 ps-3" style="height:2504px; width: 360px;background-image: url(img/main.svg);">	
+
+
+
+
+
+	<div class="menu text-light"> 
+		<div style="height: 120px;"></div>
+		<button id="menubtnmain" class="menubtn btn text-light">Главная</button>
+		<button id="menubtnnavigation" class="menubtn btn text-light">Навигация</button>
+		<button id="menubtntimetable" class="menubtn btn text-light">Расписание</button>
+		<button id="menubtneatery" class="menubtn btn text-light">Столовая</button>
+
+		<button id="menubtncardp" class="menubtn btn text-light">Карта питания (род)</button>
+		<button id="menubtncardu" class="menubtn btn text-light">Карта питания  (учащ)</button>
+
+		<button id="menubtnfond" class="menubtn btn text-light">Фонд класса</button>
+
+		<button id="menubtnratingt" class="menubtn btn text-light">Рэйтинг (учит)</button>
+		<button id="menubtnratingp" class="menubtn btn text-light">Рэйтинг (род)</button>
+		<button id="menubtnratingu" class="menubtn btn text-light">Рэйтинг  (учащ)</button>
+		<div class="col-4 mx-auto bg-light rounded">
+			<a href="https://t.me/+XRHksiVNQeUwMmQy" class="text-info" >@GaF.pr </a>
+		</div>
+	</div>	
+	<div class="header col-12 ps-4 py-3"> <!-- header -->
+			<button class="btn bg-light menubtnopen " id = "menubtnopen">=</button>
+			<button class="btn bg-light menubtnclosed " id = "menubtnclosed">=</button>
+		</div>
+	</div> 
+	<div class="pt-3 ps-3 main" >	
 		
 	</div>
-<script src="script.js"></script>
-<script type="module">
+	<div class="pt-3 ps-3 navigation" >	
+		
+	</div>
+	<div class="pt-3 ps-3 events" >	
+		
+	</div>
+	<div class="pt-3 ps-3 timetable" >	
+		
+	</div>
+	<div class="pt-3 ps-3 eatery" >	
+		
+	</div>
+
+	<div class="pt-3 ps-3 cardp" >	
+		
+	</div>
+	<div class="pt-3 ps-3 cardu" >	
+		
+	</div>
+	<div class="pt-3 ps-3 fond" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingt" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingp" >	
+		
+	</div>
+	<div class="pt-3 ps-3 ratingu" >	
+		
+	</div>
+	<script src="script.js"></script>
+	<script type="module">
 
    		
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
@@ -140,7 +163,9 @@
 
         const db = getDatabase();
 
-        var enterID = document.querySelector("#enterID");
+        var enterIDu = document.querySelector("#enterIDu");
+        var enterIDt = document.querySelector("#enterIDt");
+        var enterIDp = document.querySelector("#enterIDp");
         var enterName = document.querySelector("#enterName");
         var enterAge = document.querySelector("#enterAge");
         var enterPassword = document.querySelector("#enterPassword")
@@ -154,156 +179,234 @@
         var updateBtn = document.querySelector("#update");
         var removeBtn = document.querySelector("#remove");
         var findBtn = document.querySelector("#find");
-        var loginBtn = document.querySelector("#login");
+        var loginbtn = document.querySelector("#loginbtn");
+        var registert = document.querySelector("#registert");
+        var registerp = document.querySelector("#registerp");
+        var enterloginu = document.querySelector("#enterloginu");
+        var enterPasswordu = document.querySelector("#enterPasswordu");
 
-        function InsertDataTeacher() {
-            set(ref(db, "Teachers/"+ enterID.value),{
-                Name: enterName.value,
-                Class: enterClass.value,
-                Username: enterUsername.value,
-                Age: enterAge.value,
-                Password: enterPassword.value 
+
+        var enterNamet = document.querySelector("#enterNamet");
+        var enterClasst = document.querySelector("#enterClasst");
+        var enterPasswordt = document.querySelector("#enterPasswordt");
+
+        var enterNamep = document.querySelector("#enterNamet");
+        var enterloginchp = document.querySelector("#enterloginchp");
+        var enterpasswordchp = document.querySelector("#enterpasswordchp");
+        var enterPasswordp = document.querySelector("#enterPasswordp");
+
+        function InsertDataUchenik() {
+            set(ref(db, "Uchenik/"+ enterIDu.value),{
+                Name: enterloginu.value,
+                Password: enterPasswordu.value,
+                Points: '100',
             })
             .then(()=>{
-                alert("Data added successfully");
+                // alert("loged in");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+          
+        
+        }
+        function InsertDataTeacher() {
+            set(ref(db, "Teachers/"+ enterIDt.value),{
+                Name: enterNamet.value,
+                Class: enterClasst.value,
+                Password: enterPasswordt.value 
+            })
+            .then(()=>{
+                // alert("loged in");
             })
             .catch((error)=>{
                 alert(error);
             });
         }
         function InsertDataparent() {
-            set(ref(db, "Parents/"+ enterID.value),{
-                Name: enterName.value,
-                UsernameChild: enterClass.value,
-                PasswordChild: enterUsername.value,
-                Password: enterPassword.value 
+            set(ref(db, "Parents/"+ enterIDp.value),{
+                Name: enterNamep.value,
+                UsernameChild: enterloginchp.value,
+                PasswordChild: enterpasswordchp.value,
+                Password: enterPasswordp.value 
             })
             .then(()=>{
-                alert("Data added successfully");
+                // alert("Data added successfully");
             })
             .catch((error)=>{
                 alert(error);
             });
-            const dbref = ref(db);
-
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
         }
 
+        loginbtn.addEventListener('click', InsertDataUchenik);
+        registerp.addEventListener('click', InsertDataparent);
+        registert.addEventListener('click', InsertDataTeacher);
+        // function loginusual() {
+        //     const dbref = ref(db);
 
-        function loginusual() {
-            const dbref = ref(db);
-
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
+        //     get(child(dbref, "People/" + findID.value))
+        //     .then((snapshot)=>{
+        //         if(snapshot.exists()){
+        //             findName.innerHTML = "Name: " + snapshot.val().Name;
+        //             findAge.innerHTML = "Age: " + snapshot.val().Age;
+        //         } else {
+        //             alert("No data found");
+        //         }
+        //     })
+        //     .catch((error)=>{
+        //         alert(error)
+        //     })
             
-        }
-        function FindData() {
-            const dbref = ref(db);
+        // }
+        // function FindData() {
+        //     const dbref = ref(db);
 
-            get(child(dbref, "People/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
+        //     get(child(dbref, "People/" + findID.value))
+        //     .then((snapshot)=>{
+        //         if(snapshot.exists()){
+        //             findName.innerHTML = "Name: " + snapshot.val().Name;
+        //             findAge.innerHTML = "Age: " + snapshot.val().Age;
+        //         } else {
+        //             alert("No data found");
+        //         }
+        //     })
+        //     .catch((error)=>{
+        //         alert(error)
+        //     })
             
-        }
+        // }
 
-        function UpdateData(){
-            update(ref(db, "People/"+ enterID.value),{
-                Name: enterName.value,
-                Age: enterAge.value
-            })
-            .then(()=>{
-                alert("Data updated successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+        // function UpdateData(){
+        //     update(ref(db, "People/"+ enterID.value),{
+        //         Name: enterName.value,
+        //         Age: enterAge.value
+        //     })
+        //     .then(()=>{
+        //         alert("Data updated successfully");
+        //     })
+        //     .catch((error)=>{
+        //         alert(error);
+        //     });
+        // }
 
-        function RemoveData(){
-            remove(ref(db, "People/"+ enterID.value))
-            .then(()=>{
-                alert("Data deleted successfully");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+        // function RemoveData(){
+        //     remove(ref(db, "People/"+ enterID.value))
+        //     .then(()=>{
+        //         alert("Data deleted successfully");
+        //     })
+        //     .catch((error)=>{
+        //         alert(error);
+        //     });
+        // }
 
-        insertBtn.addEventListener('click', InsertData);
-        updateBtn.addEventListener('click', UpdateData);
-        removeBtn.addEventListener('click', RemoveData);
-        findBtn.addEventListener('click', FindData);
-
-
-
-		let menubtn = document.querySelector('#menubtn')
-		let menu = document.querySelector('.menu')
-		let regopener = document.querySelector('#regopener')
-		let registerdivteacher = document.querySelector('.registerdivteacher')
-		let logindiv = document.querySelector('.logindiv')
-		let login = document.querySelector('.login')
-		menubtn.onclick = function(){
-				alert()
-		}
-		function openmenu(){
-			menu.style.display = 'block';
-			alert()
-		}
-		function gotoregchoose(){
-			registerdivchoose.style.display = 'block';
-			logindiv.style.display = 'none';
-			alert()
-		}
-		function gotoregpar(){
-			registerdivteacher.style.display = 'block';
-			logindiv.style.display = 'none';
-			alert()
-		}
-		function gotoregpteach(){
-			registerdivteacher.style.display = 'block';
-			logindiv.style.display = 'none';
-			alert()
-		}
-		function gotomain(){
-			main.style.display = 'block';
-			logindiv.style.display = 'none';
-			alert()
-		}
-		regopener.addEventListener('click', gotoregchoose);
-		regopenert.addEventListener('click', gotoregpar);
-		regopenerp.addEventListener('click', gotoregpteach);
-		menubtn.addEventListener('click', openmenu);
+        // insertBtn.addEventListener('click', InsertData);
+        // updateBtn.addEventListener('click', UpdateData);
+        // removeBtn.addEventListener('click', RemoveData);
+        // findBtn.addEventListener('click', FindData);       
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript">
+	var menubtnopen = document.querySelector('#menubtnopen');
+	var menubtnclosed = document.querySelector('#menubtnclosed');
+
+	var menubtnmain= document.querySelector('#menubtnmain');
+	var menubtnnavigation = document.querySelector('#menubtnnavigation');
+	var menubtnevents = document.querySelector('#menubtnevents');
+	var menubtntimetable = document.querySelector('#menubtntimetable');
+	var menubtneatery = document.querySelector('#menubtneatery');
+
+	var menubtncardp = document.querySelector('#menubtncardp');
+	var menubtncardu = document.querySelector('#menubtncardu');
+
+	var menubtnfond = document.querySelector('#menubtnfond');
+
+	var menubtnratingt = document.querySelector('#menubtnratingt');
+	var menubtnratingp = document.querySelector('#menubtnratingp');
+	var menubtnratingu = document.querySelector('#menubtnratingu');
+
+	let menu = document.querySelector('.menu');
+	let main = document.querySelector('.main');
+	let navigation = document.querySelector('.navigation');
+	let events = document.querySelector('.events');
+	let timetable = document.querySelector('.timetable');
+	let eatery = document.querySelector('.eatery');
+	let menustat=0;
+
+	function openmenu() {
+        	menu.style.display = 'block';
+        	menubtnclosed.style.display = 'block';
+        	menubtnopen.style.display = 'none'
+    }
+	function closemenu() {
+        	menu.style.display = 'none';
+        	menubtnclosed.style.display = 'none';
+        	menubtnopen.style.display = 'block'
+    }
+	menubtnclosed.addEventListener('click', closemenu);
+	menubtnopen.addEventListener('click', openmenu);
+
+	function menumain() {
+        	menu.style.display = 'none';
+        	navigation.style.display = 'none';
+        	events.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'none';
+        	main.style.display = 'block';
+    }
+	function menunavigation() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	events.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'none';
+        	navigation.style.display = 'block';
+    }
+	function menuevents() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'none';
+        	events.style.display = 'block';
+    }
+	function menutimetabe() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	events.style.display = 'none';
+        	eatery.style.display = 'none';
+        	timetable.style.display = 'block';
+    }
+	function menueatery() {
+        	menu.style.display = 'none';
+        	main.style.display = 'none';
+        	navigation.style.display = 'none';
+        	events.style.display = 'none';
+        	timetable.style.display = 'none';
+        	eatery.style.display = 'block';
+    }
+	menubtnmain.addEventListener('click', menumain);
+	menubtnnavigation.addEventListener('click', menunavigation);
+	menubtnevents.addEventListener('click', menuevents);
+	menubtntimetable.addEventListener('click', menutimetabe);
+	menubtneatery.addEventListener('click', menueatery);
+</script> -->
 </body>
+</html>

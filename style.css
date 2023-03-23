@@ -1,10 +1,14 @@
-
+		@font-face{
+			src:url(img/Rubik.ttf);
+			font-family: my-font;
+		}
 		.header {
 			position: fixed;
 			left: 0;
 			top: 0;
 			height: 70px;
 			background-color: #205E68;
+			display: none;
 		}
 		.menu{
 			position: fixed;
@@ -26,6 +30,7 @@
 			background-image: url(img/register_bg.svg);
 			width: 360px;
 			color: #47848C;
+			display: none;
 
 		}
 		.registerdivparent{
@@ -33,6 +38,7 @@
 			background-image: url(img/register_bg.svg);
 			width: 360px;
 			color: #47848C;
+			display: none;
 
 		}
 		.regchoose{
@@ -40,12 +46,13 @@
 			width: 360px;
 			background-image: url(img/register_bg.svg);
 			color: #47848C;
-		}
-		.menubtnopen{
 			display: none;
 		}
-		.menubtnclosed{
+		.menubtnopen{
 			display: block;
+		}
+		.menubtnclosed{
+			display: none;
 		}
 		.menubtn{
 			background-image: url(img/btn_menu.svg);
@@ -59,6 +66,19 @@
 			height:2504px; 
 			width: 360px;
 			background-image: url(img/main.svg);
+			display: none;
+		}
+		.navigation{
+			height:840px; 
+			width: 360px;
+			background-image: url(img/navigation.svg);
+			display: none;
+		}
+		.events{
+			height:1086px; 
+			width: 360px;
+			background-image: url(img/events.svg);
+			display: none;
 		}
 		.timetable{
 			height:958px; 
@@ -72,15 +92,33 @@
 			background-image: url(img/eatery.svg);
 			display: none;
 		}
-		.navigation{
+		.cardp{
 			height:640px; 
 			width: 360px;
-			background-image: url(img/navigation.svg);
+			background-image: url(img/fond.svg);
 			display: none;
 		}
-		.events{
-			height:1086px; 
+		.cardu{
+			height:640px; 
 			width: 360px;
-			background-image: url(img/events.svg);
+			background-image: url(img/fond.svg);
+			display: none;
+		}
+		.fond{
+			height:640px; 
+			width: 360px;
+			background-image: url(img/fond.svg);
+			display: none;
+		}
+		.ratingp{
+			height:1115px; 
+			width: 360px;
+			background-image: url(img/ratingp.svg);
+			display: none;
+		}
+		.ratingu{
+			height:1115px; 
+			width: 360px;
+			background-image: url(img/ratingu.svg);
 			display: none;
 		}
