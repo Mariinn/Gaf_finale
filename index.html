@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Метис</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<body>
+	<div class="header col-12"> <!-- header -->
+		<div class="logoholder">
+		</div>
+		<div class="menubtnholder ps-4 py-3">
+			<button class="btn bg-light menubtn ">=</button>
+		</div>
+	</div> 
+	<!-- <div class="menuholder d-flex col-12">
+		<div class="menu bg-light col-8"> 
+		</div>
+		<div class="menuotherhalf col-4"></div>
+	</div> -->
+	<div class="col-12 fonex main"> 
+		<div id="enterDetails">
+	        <h1>Войти</h1>
+
+	        <h4>ID</h4> 
+	        <input id="enterID" type="text"> 
+
+	        <h4>Имя</h4> 
+	        <input id="enterName" type="text"> 
+
+	        <h4>Сколько лет</h4> 
+	        <input id="enterAge" type="number"> <br><br>
+
+	        <button id="insert">вставсить</button>
+	        <button id="update">апдэйт</button>
+	        <button id="remove">убрать</button> <br><br>
+	    </div>
+
+	    <div id="findDetails">
+	        <h1>Найти по айди</h1>
+	        <h4>ID</h4>
+	        <input id="findID" type="text"> <br><br>
+	        <button id="find">FIND</button>
+	        <h3 id="findName" type="text"></h3>
+	        <h3 id="findAge" type="number"></h3> <br><br>
+	    </div>
+	</div>
+	<div class="logindiv"> <!--login-->
+		<div class=" col-6 "></div>
+		<div class="col-10 mx-auto text-center">
+			<img src="img/logow.svg" alt="Картинка"  class="w-100 mt-5" style="height:130px" />
+		</div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="Логин" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<div  class="mx-auto col-5 mt-4">
+				<button class="login btn btn-light btn-lg">Войти</button>
+			</div>
+			
+			<h6 class="regopener text-end mt-4 text-light" id="regopener">регистрация </h6>
+		</div>
+	</div>
+	<div class="regchoose"><!--register choose-->
+		<button class="btn btn-sm btn-light mt-4 ms-4 "><-</button>
+			<h4 class="text-center mt-5">Кам вы являетесь</h4>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100">Родитель</button>
+				
+			</div>
+			<div class="mx-auto col-6">
+				<button class="login btn btn-light w-100 mt-4">Учитель</button>
+				
+			</div>
+	</div>
+	<div class="registerdivteacher"> <!--register teacher-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
+	</div>
+	<div class="registerdivparent"> <!--register parent-->
+		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
+		<div class=" col-6 "></div>
+		<div class="col-7 mx-auto mt-5">
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин ребенка" id="findPassword" type="text" >
+			<input class="w-100 mt-4  border-0 rounded" placeholder="Пароль ребенка" id="findName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
+			<div  class="mx-auto col-11 mt-4">
+				<button class="login btn btn-light">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+			</div>
+			
+		</div>
+	</div>
+<script src="script.js"></script>
+<script type="module">
+
+   		
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+		  // TODO: Add SDKs for Firebase products that you want to use
+		  // https://firebase.google.com/docs/web/setup#available-libraries
+
+		  // Your web app's Firebase configuration
+		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		  const firebaseConfig = {
+		    apiKey: "AIzaSyBZkY-uGaSlG2BGD1oWGWkCQfoJYo7Fpv0",
+		    authDomain: "gaf-final.firebaseapp.com",
+		    databaseURL: "https://gaf-final-default-rtdb.europe-west1.firebasedatabase.app",
+		    projectId: "gaf-final",
+		    storageBucket: "gaf-final.appspot.com",
+		    messagingSenderId: "1016022350146",
+		    appId: "1:1016022350146:web:f9fd5746bcea73524af0db",
+		    measurementId: "G-G2KDVKFJXL"
+		  };
+
+		  // Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+
+
+        import {getDatabase, ref, get, set, child, update, remove}
+        from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"
+        
+
+        const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterAge = document.querySelector("#enterAge");
+        var enterPassword = document.querySelector("#enterPassword")
+        var findID = document.querySelector("#findID");
+        var findName = document.querySelector("#findName");
+        var findAge = document.querySelector("#findAge");
+        var findPassword = document.querySelector("#findPassword");
+      	
+
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var removeBtn = document.querySelector("#remove");
+        var findBtn = document.querySelector("#find");
+        var loginBtn = document.querySelector("#login");
+
+        function InsertDataTeacher() {
+            set(ref(db, "Teachers/"+ enterID.value),{
+                Name: enterName.value,
+                Class: enterClass.value,
+                Username: enterUsername.value,
+                Age: enterAge.value,
+                Password: enterPassword.value 
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+        function InsertDataparent() {
+            set(ref(db, "Parents/"+ enterID.value),{
+                Name: enterName.value,
+                UsernameChild: enterClass.value,
+                PasswordChild: enterUsername.value,
+                Password: enterPassword.value 
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+        }
+
+
+        function loginusual() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "People/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+
+        function UpdateData(){
+            update(ref(db, "People/"+ enterID.value),{
+                Name: enterName.value,
+                Age: enterAge.value
+            })
+            .then(()=>{
+                alert("Data updated successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        function RemoveData(){
+            remove(ref(db, "People/"+ enterID.value))
+            .then(()=>{
+                alert("Data deleted successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+        insertBtn.addEventListener('click', InsertData);
+        updateBtn.addEventListener('click', UpdateData);
+        removeBtn.addEventListener('click', RemoveData);
+        findBtn.addEventListener('click', FindData);
+
+</script>
+</body>
+</html>

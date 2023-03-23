@@ -1,0 +1,62 @@
+		.header {
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 110px;
+			display: none;	
+		}
+		.logoholder{
+			height: 40px;
+			background-color: #5b7bac;
+		}
+		.menubtnholder{
+			height: 70px;
+			background-color: #6ee9fb;
+		}
+		.fonex{
+			height: 640px;
+			background-image: url(fon3.png);
+			background-size: cover ;
+			background-position: center center;
+		}
+		.menu{
+			height: 640px;
+			background-image: url(menu.png);
+			background-size: cover ;
+			background-position: center center;
+			display: none;	
+		}
+		.menuotherhalf{
+			display: none;			
+			height: 640px;
+		}
+		.menuholder{
+			height: 640px;
+		}
+		.logindiv{
+			height: 640px;
+			background-image: url(img/login_bg.svg);
+			width: 360px;
+
+		}
+		.registerdivteacher{
+			height: 640px;
+			background-image: url(img/register_bg.svg);
+			width: 360px;
+			color: #47848C;
+
+		}
+		.registerdivparent{
+			height: 640px;
+			background-image: url(img/register_bg.svg);
+			width: 360px;
+			color: #47848C;
+
+		}
+		.regchoose{
+			height: 640px;
+			width: 360px;
+			background-image: url(img/register_bg.svg);
+			color: #47848C;
+
+		}
