@@ -1,9 +1,9 @@
+
 		.header {
 			position: fixed;
 			left: 0;
 			top: 0;
 			height: 110px;
-			display: none;	
 		}
 		.logoholder{
 			height: 40px;
@@ -20,11 +20,12 @@
 			background-position: center center;
 		}
 		.menu{
+			position: fixed;
+			left: 0;
+			top: 0;
 			height: 640px;
-			background-image: url(menu.png);
-			background-size: cover ;
-			background-position: center center;
-			display: none;	
+			width: 200px;
+			background-image: url(img/menu_bg1.svg);
 		}
 		.menuotherhalf{
 			display: none;			
@@ -58,5 +59,3 @@
 			width: 360px;
 			background-image: url(img/register_bg.svg);
 			color: #47848C;
-
-		}

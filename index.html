@@ -9,6 +9,8 @@
 </head>
 <body>
 	<body>
+	<div class="menu bg-light "> 
+	</div>	
 	<div class="header col-12"> <!-- header -->
 		<div class="logoholder">
 		</div>
@@ -21,7 +23,7 @@
 		</div>
 		<div class="menuotherhalf col-4"></div>
 	</div> -->
-	<div class="col-12 fonex main"> 
+	<!-- <div class="col-12 fonex main"> 
 		<div id="enterDetails">
 	        <h1>Войти</h1>
 
@@ -47,15 +49,15 @@
 	        <h3 id="findName" type="text"></h3>
 	        <h3 id="findAge" type="number"></h3> <br><br>
 	    </div>
-	</div>
+	</div> -->
 	<div class="logindiv"> <!--login-->
 		<div class=" col-6 "></div>
 		<div class="col-10 mx-auto text-center">
 			<img src="img/logow.svg" alt="Картинка"  class="w-100 mt-5" style="height:130px" />
 		</div>
 		<div class="col-7 mx-auto mt-5">
-			<input class="w-100 border-0 rounded" placeholder="Логин" id="findName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
+			<input class="w-100 border-0 rounded" placeholder="Логин" id="enterName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPassword" type="text" >
 			<div  class="mx-auto col-5 mt-4">
 				<button class="login btn btn-light btn-lg">Войти</button>
 			</div>
@@ -79,8 +81,8 @@
 		<button class="btn btn-sm btn-light mt-4 ms-4"><-</button>
 		<div class=" col-6 "></div>
 		<div class="col-7 mx-auto mt-5">
-			<input class="w-100 border-0 rounded" placeholder="ФИО" id="findName" type="text">
-			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="findPassword" type="text" >
+			<input class="w-100 border-0 rounded" placeholder="ФИО" id="enterName" type="text">
+			<input class="w-100 mt-4 border-0 rounded" placeholder="Какой предмет приподаете" id="enterClass" type="text" >
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Логин" id="findName" type="text">
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="findPassword" type="text" >
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" id="findPassword" type="text" >
@@ -104,6 +106,9 @@
 			</div>
 			
 		</div>
+	</div>
+	<div class="pt-3 ps-3" style="height:2504px; width: 360px;background-image: url(img/main.svg);">	
+		
 	</div>
 <script src="script.js"></script>
 <script type="module">
@@ -262,6 +267,50 @@
         removeBtn.addEventListener('click', RemoveData);
         findBtn.addEventListener('click', FindData);
 
+
+
+
+
+
+
+		let menubtn = document.querySelector('#menubtn')
+		let menu = document.querySelector('.menu')
+		let regopener = document.querySelector('#regopener')
+		let registerdivteacher = document.querySelector('.registerdivteacher')
+		let logindiv = document.querySelector('.logindiv')
+		let login = document.querySelector('.login')
+		menubtn.onclick = function(){
+				menu.style.display = 'block';
+		}
+		function openmenu(){
+			menu.style.display = 'block';
+			alert()
+		}
+		function gotoregchoose(){
+			registerdivchoose.style.display = 'block';
+			logindiv.style.display = 'none';
+			alert()
+		}
+		function gotoregpar(){
+			registerdivteacher.style.display = 'block';
+			logindiv.style.display = 'none';
+			alert()
+		}
+		function gotoregpteach(){
+			registerdivteacher.style.display = 'block';
+			logindiv.style.display = 'none';
+			alert()
+		}
+		function gotomain(){
+			main.style.display = 'block';
+			logindiv.style.display = 'none';
+			alert()
+		}
+		regopener.addEventListener('click', gotoregchoose);
+		regopenert.addEventListener('click', gotoregpar);
+		regopenerp.addEventListener('click', gotoregpteach);
+		menubtn.addEventListener('click', openmenu);
+
+
 </script>
 </body>
-</html>
