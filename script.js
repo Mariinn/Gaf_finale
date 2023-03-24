@@ -157,6 +157,7 @@
         	ratingt.style.display = 'none';
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
+        	ou.style.display = 'none';
         	main.style.display = 'block';
     }
 	function menunavigation() {
@@ -171,6 +172,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	navigation.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menutimetabe() {
         	menu.style.display = 'none';
@@ -184,6 +186,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	timetable.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menueatery() {
         	menu.style.display = 'none';
@@ -197,6 +200,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	eatery.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menucardp() {
         	menu.style.display = 'none';
@@ -210,6 +214,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	cardp.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menucardu() {
         	menu.style.display = 'none';
@@ -223,6 +228,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	cardu.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menufond() {
         	menu.style.display = 'none';
@@ -236,6 +242,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	fond.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menuratingt() {
         	menu.style.display = 'none';
@@ -249,6 +256,7 @@
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'none';
         	ratingt.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	function menuratingp() {
         	menu.style.display = 'none';
@@ -262,6 +270,7 @@
         	ratingp.style.display = 'block';
         	ratingu.style.display = 'none';
         	cardu.style.display = 'none';
+        	ou.style.display = 'none';
     }
 	function menuratingu() {
         	menu.style.display = 'none';
@@ -275,6 +284,7 @@
         	ratingt.style.display = 'none';
         	ratingp.style.display = 'none';
         	ratingu.style.display = 'block';
+        	ou.style.display = 'none';
     }
 	menubtnmain.addEventListener('click', menumain);
 	menubtnnavigation.addEventListener('click', menunavigation);
