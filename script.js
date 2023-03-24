@@ -42,23 +42,46 @@
 	let ratingt = document.querySelector('.ratingt');
 	let ratingp = document.querySelector('.ratingp');
 	let ratingu = document.querySelector('.ratingu');
-	let menustat=0;
+	let mt1 = document.querySelector('.mt1');
+	let mt2 = document.querySelector('.mt2');
+	let mu1 = document.querySelector('.mu1');
+	let mu2 = document.querySelector('.mu2');
+	let mp1 = document.querySelector('.mp1');
+	let mp2 = document.querySelector('.mp2');
 
+
+	var openpoints = document.querySelector('#openpoints');
+	var openrating = document.querySelector('#openrating');
+
+
+	function openratingfort() {
+        	ratingp.style.display = 'block';
+        	ratingt.style.display = 'none';
+    }
+	openrating.addEventListener('click', openratingfort);
+	
 	function openmain1() {
         	main.style.display = 'block';
         	header.style.display = 'block';
         	logindiv.style.display = 'none'
+        	mu1.style.display = 'block';
+        	mu2.style.display = 'block';
     }
 	function openmain2() {
         	main.style.display = 'block';
         	header.style.display = 'block';
         	registerdivteacher.style.display = 'none'
+        	mt1.style.display = 'block';
+        	mt2.style.display = 'block';
     }
 	function openmain3() {
         	main.style.display = 'block';
         	header.style.display = 'block';
         	registerdivparent.style.display = 'none'
+        	mp1.style.display = 'block';
+        	mp2.style.display = 'block';
     }
+
 	function openregchoose() {
         	regchoose.style.display = 'block';
         	logindiv.style.display = 'none'

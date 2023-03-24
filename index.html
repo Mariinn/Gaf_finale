@@ -75,18 +75,18 @@
 	<div class="menu text-light"> 
 		<div style="height: 120px;"></div>
 		<button id="menubtnmain" class="menubtn btn text-light">Главная</button>
-		<button id="menubtnnavigation" class="menubtn btn text-light">Навигация</button>
-		<button id="menubtntimetable" class="menubtn btn text-light">Расписание</button>
-		<button id="menubtneatery" class="menubtn btn text-light">Столовая</button>
+		<button id="menubtnnavigation" class="menubtn btn text-light ma1">Навигация</button>
+		<button id="menubtntimetable" class="menubtn btn text-light ma2">Расписание</button>
+		<button id="menubtneatery" class="menubtn btn text-light ma3">Столовая</button>
 
-		<button id="menubtncardp" class="menubtn btn text-light">Карта питания (род)</button>
-		<button id="menubtncardu" class="menubtn btn text-light">Карта питания  (учащ)</button>
+		<button id="menubtncardp" class="menubtn btn text-light mp1">Карта питания</button>
+		<button id="menubtncardu" class="menubtn btn text-light mu1">Карта питания</button>
 
-		<button id="menubtnfond" class="menubtn btn text-light">Фонд класса</button>
+		<button id="menubtnfond" class="menubtn btn text-light mt1">Фонд класса</button>
 
-		<button id="menubtnratingt" class="menubtn btn text-light">Рэйтинг (учит)</button>
-		<button id="menubtnratingp" class="menubtn btn text-light">Рэйтинг (род)</button>
-		<button id="menubtnratingu" class="menubtn btn text-light">Рэйтинг  (учащ)</button>
+		<button id="menubtnratingt" class="menubtn btn text-light mt2">Рэйтинг</button>
+		<button id="menubtnratingp" class="menubtn btn text-light mp2">Рэйтинг</button>
+		<button id="menubtnratingu" class="menubtn btn text-light mu2">Рэйтинг</button>
 		<div class="col-4 mx-auto bg-light rounded">
 			<a href="https://t.me/+XRHksiVNQeUwMmQy" class="text-info" >@GaF.pr </a>
 		</div>
@@ -121,13 +121,42 @@
 	<div class="pt-3 ps-3 fond" >	
 		
 	</div>
-	<div class="pt-3 ps-3 ratingt" >	
+	<div class="pt-3 ps-3 ratingt pt-5" >	
+		<div class="mt-5 col-6 mx-auto">
+		<button class="btn btn-light w-100" id="openpoints">Оценить ученика</button>
+			
+		</div>
+		<div class="mt-3 col-4 mx-auto">
+		<button class="btn btn-light w-100" id="openrating">Рейтинг</button>
+			
+		</div>
 		
 	</div>
 	<div class="pt-3 ps-3 ratingp" >	
-		
 	</div>
-	<div class="pt-3 ps-3 ratingu" >	
+	<div class="pt-3 ps-3 pe-3 ratingu" >	
+		<div style=" height: 135px;"></div>
+		<div class="rtu">
+
+			<h4 id="findName1" type="text"></h4>
+			<h4 id="findPoints1" type="text"></h4>
+		</div>
+		<div class="rtu">
+			<h4 id="findName2" type="text"></h4>
+			<h4 id="findPoints2" type="text"></h4>
+		</div>
+		<div class="rtu">
+			<h4 id="findName3" type="text"></h4>
+			<h4 id="findPoints3" type="text"></h4>
+		</div>
+		<div class="rtu">
+			<h4 id="findName4" type="text"></h4>
+			<h4 id="findPoints4" type="text"></h4>
+		</div>
+		<div class="rtu">
+			<h4 id="findName5" type="text"></h4>
+			<h4 id="findPoints5" type="text"></h4>
+		</div>
 		
 	</div>
 	<script src="script.js"></script>
@@ -169,10 +198,15 @@
         var enterName = document.querySelector("#enterName");
         var enterAge = document.querySelector("#enterAge");
         var enterPassword = document.querySelector("#enterPassword")
-        var findID = document.querySelector("#findID");
-        var findName = document.querySelector("#findName");
-        var findAge = document.querySelector("#findAge");
-        var findPassword = document.querySelector("#findPassword");
+        var findID1 = 1;
+        var findName1 = document.querySelector("#findName");
+        var findPoints1 = document.querySelector("#findPassword");
+        var findID1 = 2;
+        var findName1 = document.querySelector("#findName");
+        var findPoints1 = document.querySelector("#findPassword");
+        var findID1 = 3;
+        var findName1 = document.querySelector("#findName");
+        var findPoints1 = document.querySelector("#findPassword");
       	
 
         var insertBtn = document.querySelector("#insert");
@@ -258,23 +292,23 @@
         //     })
             
         // }
-        // function FindData() {
-        //     const dbref = ref(db);
+        function FindData() {
+            const dbref = ref(db);
 
-        //     get(child(dbref, "People/" + findID.value))
-        //     .then((snapshot)=>{
-        //         if(snapshot.exists()){
-        //             findName.innerHTML = "Name: " + snapshot.val().Name;
-        //             findAge.innerHTML = "Age: " + snapshot.val().Age;
-        //         } else {
-        //             alert("No data found");
-        //         }
-        //     })
-        //     .catch((error)=>{
-        //         alert(error)
-        //     })
+            get(child(dbref, "Uchenik/" + findID.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
             
-        // }
+        }
 
         // function UpdateData(){
         //     update(ref(db, "People/"+ enterID.value),{

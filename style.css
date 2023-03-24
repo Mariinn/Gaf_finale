@@ -110,6 +110,12 @@
 			background-image: url(img/fond.svg);
 			display: none;
 		}
+		.ratingt{
+			height:640px; 
+			width: 360px;
+			background-image: url(img/register_bg.svg);
+			display: none;
+		}
 		.ratingp{
 			height:1115px; 
 			width: 360px;
@@ -121,4 +127,33 @@
 			width: 360px;
 			background-image: url(img/ratingu.svg);
 			display: none;
+		}
+		.rtu{
+			height: 50px;
+			background-color: red;
+			opacity: 50%;
+		}
+		.mt1{
+			display: none;
+
+		}
+		.mt2{
+			display: none;
+			
+		}
+		.mu1{
+			display: none;
+
+		}
+		.mu2{
+			display: none;
+			
+		}
+		.mp1{
+			display: none;
+
+		}
+		.mp2{
+			display: none;
+			
 		}
