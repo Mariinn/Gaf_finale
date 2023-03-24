@@ -9,6 +9,7 @@
 			height: 70px;
 			background-color: #205E68;
 			display: none;
+			width: 360px;
 		}
 		.menu{
 			position: fixed;
@@ -63,7 +64,7 @@
 
 		}
 		.main{
-			height:2504px; 
+			height:2690px; 
 			width: 360px;
 			background-image: url(img/main.svg);
 			display: none;
@@ -95,19 +96,25 @@
 		.cardp{
 			height:640px; 
 			width: 360px;
-			background-image: url(img/fond.svg);
+			background-image: url(img/cardshc.svg);
 			display: none;
 		}
 		.cardu{
 			height:640px; 
 			width: 360px;
-			background-image: url(img/fond.svg);
+			background-image: url(img/cardpit.svg);
 			display: none;
 		}
 		.fond{
 			height:640px; 
 			width: 360px;
 			background-image: url(img/fond.svg);
+			display: none;
+		}
+		.ou{
+			height:640px; 
+			width: 360px;
+			background-image: url(img/register_bg.svg);
 			display: none;
 		}
 		.ratingt{
@@ -130,8 +137,6 @@
 		}
 		.rtu{
 			height: 43px;
-			background-color: red;
-			opacity: 50%;
 		}
 		.mt1{
 			display: none;

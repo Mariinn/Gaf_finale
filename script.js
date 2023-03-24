@@ -52,14 +52,26 @@
 
 	var openpoints = document.querySelector('#openpoints');
 	var openrating = document.querySelector('#openrating');
+	let ou = document.querySelector('.ou');
 
+	var sda = document.querySelector('#sda');
 
+	function sdaa() {
+        	alert('Вы оценили ученика')
+    }
+	sda.addEventListener('click', sdaa);
 	function openratingfort() {
         	ratingp.style.display = 'block';
         	ratingt.style.display = 'none';
     }
 	openrating.addEventListener('click', openratingfort);
-	
+
+	function openpointsfort() {
+        	ou.style.display = 'block';
+        	ratingt.style.display = 'none';
+    }
+	openpoints.addEventListener('click', openpointsfort);
+
 	function openmain1() {
         	main.style.display = 'block';
         	header.style.display = 'block';
@@ -79,6 +91,7 @@
         	header.style.display = 'block';
         	registerdivparent.style.display = 'none'
         	mp1.style.display = 'block';
+        	mu1.style.display = 'block';
         	mp2.style.display = 'block';
     }
 

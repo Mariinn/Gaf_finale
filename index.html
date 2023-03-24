@@ -45,7 +45,7 @@
 			<input class="w-100 mt-4 border-0 rounded" placeholder="ID" id="enterIDt" type="text">
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPasswordt" type="text" >
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля"  type="text" >
-			<div  class="mx-auto col-11 mt-4">
+			<div  class="mx-auto col-10 mt-4">
 				<button class=" btn btn-light" id="registert">зарегистрироваться</button>
 			</div>
 			
@@ -61,7 +61,7 @@
 			<input class="w-100 mt-4  border-0 rounded" placeholder="ID ребенка"  id="enterIDp" type="text">
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Пароль" id="enterPasswordp" type="text" >
 			<input class="w-100 mt-4 border-0 rounded" placeholder="Повтор пароля" type="text" >
-			<div  class="mx-auto col-11 mt-4">
+			<div  class="mx-auto col-10 mt-4">
 				<button class=" btn btn-light" id="registerp">зарегистрироваться</button>
 			</div>
 			
@@ -79,7 +79,7 @@
 		<button id="menubtntimetable" class="menubtn btn text-light ma2">Расписание</button>
 		<button id="menubtneatery" class="menubtn btn text-light ma3">Столовая</button>
 
-		<button id="menubtncardp" class="menubtn btn text-light mp1">Карта питания</button>
+		<button id="menubtncardp" class="menubtn btn text-light mp1">Карта школьная</button>
 		<button id="menubtncardu" class="menubtn btn text-light mu1">Карта питания</button>
 
 		<button id="menubtnfond" class="menubtn btn text-light mt1">Фонд класса</button>
@@ -91,7 +91,7 @@
 			<a href="https://t.me/+XRHksiVNQeUwMmQy" class="text-info" >@GaF.pr </a>
 		</div>
 	</div>	
-	<div class="header col-12 ps-4 py-3"> <!-- header -->
+	<div class="header ps-4 py-3"> <!-- header -->
 			<button class="btn bg-light menubtnopen " id = "menubtnopen">=</button>
 			<button class="btn bg-light menubtnclosed " id = "menubtnclosed">=</button>
 		</div>
@@ -130,8 +130,24 @@
 		<button class="btn btn-light w-100" id="openrating">Рейтинг</button>
 			
 		</div>
-		
 	</div>
+	<div class="pt-3 ps-3 ou" style="color:#717171">	
+		<div style="height: 130px;color:#717171 " class="text-center "></div>
+		<input class=" border-0 rounded" placeholder="Ведите ФИО ученика" id="enterName" type="text"  style="margin-left: 70px;color:#717171">
+		<form name="form1" class="mt-3">
+			<p><select name="list1" style="margin-left: 50px;color:#717171">
+			 	<option>Оценка ученика</option>
+			 	<option value="1">Участие в олимпиаде</option>
+			 	<option value="2">Участие в шк жизни</option>
+			 	<option value="3">Опоздание</option>
+			 	<option value="4">Не соблюдение шк формы</option>
+			 	<option value="5">Прогул</option>
+			 </select></p>
+			<p  style="margin-left: 60px; color:#717171"><input class="btn bg-light" id="sda" value="Оценить"></p>
+		</form>
+
+	</div>
+
 	<div class="pt-3 ps-3 ratingp" >	
 	</div>
 	<div class="pt-3 ps-3 pe-3 ratingu" >	
@@ -213,7 +229,7 @@
         var findID5 = 5;
         var findName5 = document.querySelector("#findName5");
         var findPoints5 = document.querySelector("#findPassword");
-      	
+      	var menubtnratingt = document.querySelector("#menubtnratingt");
 
         var insertBtn = document.querySelector("#insert");
         var updateBtn = document.querySelector("#update");
@@ -234,6 +250,98 @@
         var enterloginchp = document.querySelector("#enterloginchp");
         var enterpasswordchp = document.querySelector("#enterpasswordchp");
         var enterPasswordp = document.querySelector("#enterPasswordp");
+
+        function FindData1() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Uchenik/" + findID1.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName1.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge1.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    // alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        function FindData2() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Uchenik/" + findID2.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName2.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge2.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    // alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        function FindData3() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Uchenik/" + findID3.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName3.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge3.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    // alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        function FindData4() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Uchenik/" + findID4.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName4.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge4.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    // alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        function FindData5() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Uchenik/" + findID5.value))
+            .then((snapshot)=>{
+                if(snapshot.exists()){
+                    findName5.innerHTML = "Name: " + snapshot.val().Name;
+                    findAge5.innerHTML = "Age: " + snapshot.val().Age;
+                } else {
+                    // alert("No data found");
+                }
+            })
+            .catch((error)=>{
+                alert(error)
+            })
+            
+        }
+        menubtnratingu.addEventListener('click', FindData1);
+        menubtnratingu.addEventListener('click', FindData2);
+        menubtnratingu.addEventListener('click', FindData3);
+        menubtnratingu.addEventListener('click', FindData4);
+        menubtnratingu.addEventListener('click', FindData5);
+
 
         function InsertDataUchenik() {
             set(ref(db, "Uchenik/"+ enterIDu.value),{
@@ -298,23 +406,6 @@
         //     })
             
         // }
-        function FindData() {
-            const dbref = ref(db);
-
-            get(child(dbref, "Uchenik/" + findID.value))
-            .then((snapshot)=>{
-                if(snapshot.exists()){
-                    findName.innerHTML = "Name: " + snapshot.val().Name;
-                    findAge.innerHTML = "Age: " + snapshot.val().Age;
-                } else {
-                    alert("No data found");
-                }
-            })
-            .catch((error)=>{
-                alert(error)
-            })
-            
-        }
 
         // function UpdateData(){
         //     update(ref(db, "People/"+ enterID.value),{
